@@ -10,10 +10,10 @@ function App() {
   return (
     <BrowserRouter>
       <Menu/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='novovideo' element={<NovoVideo/>}/>
-      </Routes>
+        <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='novovideo' element={<NovoVideo/>}/>
+        </Routes>
       <Rodape/>
     </BrowserRouter>
   )

@@ -12,7 +12,7 @@ const Home = () =>{
     useEffect(() => {
         const fetchVideos = async () => {
           try {
-            const response = await fetch('http://localhost:3000/videos');
+            const response = await fetch('https://my-json-server.typicode.com/kety95/alura-flix-api/videos');
             const data = await response.json();
             if (data) {
               setVideos(data);
