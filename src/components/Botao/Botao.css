@@ -1,0 +1,29 @@
+.btn {
+    text-decoration: none;
+    border-radius: 12px;
+    padding: 8px 20px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.claro {
+    border: 3px solid white;
+    color: white;
+    background-color: #262626;
+}
+
+.escuro {
+    border: 3px solid #2271D1;
+    color: #2271D1;
+    background-color: black;
+}
+
+@media (max-width: 600px){
+    .btn {
+        font-size: 1.0rem;
+        padding: 4px 0px;
+    }
+}

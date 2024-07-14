@@ -1,0 +1,31 @@
+.cabecalho {
+    background-color: #262626;
+}
+
+.cabecalho nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalho nav img {
+    max-width: 130px;
+}
+
+.cabecalho nav span {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+@media (max-width: 600px){
+    .cabecalho nav {
+        width: 320px;
+        gap: 12px;
+        padding-left: 10px;
+    }
+
+    .cabecalho nav img {
+        max-width: 110px;
+    }
+}

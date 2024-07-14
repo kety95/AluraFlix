@@ -1,0 +1,36 @@
+.banner {
+    background-image: url('../../assets/background.png');
+    background-size: cover;
+    background-position: center;
+    padding: 70px 18px 0px 18px;
+    display: flex;
+    min-height: 220px;
+    padding-bottom: 30px;
+}
+
+.banner .esquerda {
+    flex: 1;
+    color: white;
+}
+
+.banner .esquerda h2 {
+    font-weight: 400;
+    font-size: 2.4rem;
+    margin-bottom: 0px;
+}
+
+.banner .esquerda p {
+    max-width: 400px;
+    font-weight: 200;
+}
+
+.banner .direita {
+    text-align: center;
+    flex: 1;
+}
+
+@media (max-width: 600px){
+    .banner {
+        flex-direction: column;
+    }
+}

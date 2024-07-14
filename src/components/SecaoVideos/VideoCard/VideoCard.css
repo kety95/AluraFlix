@@ -1,0 +1,25 @@
+.video {
+    padding-bottom: 20px;
+}
+
+.controles {
+    min-height: 35px;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.controles span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.no {
+    display: none;
+}

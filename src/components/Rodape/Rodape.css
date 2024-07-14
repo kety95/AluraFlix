@@ -1,0 +1,9 @@
+.rodape {
+    text-align: center;
+    background-color: #030910;
+    padding: 16px;
+}
+
+.rodape img {
+    max-width: 110px;
+}

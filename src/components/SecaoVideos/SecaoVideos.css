@@ -1,0 +1,23 @@
+.secaoVideos {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.videos {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px){
+    .videos {
+        margin-top: 30px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+}
