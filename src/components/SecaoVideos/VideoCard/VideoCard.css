@@ -2,6 +2,11 @@
     padding-bottom: 20px;
 }
 
+.big-card {
+    width: 800px;
+    height: 450px;
+}
+
 .controles {
     min-height: 35px;
     background-color: black;
@@ -23,3 +28,4 @@
 .no {
     display: none;
 }
+

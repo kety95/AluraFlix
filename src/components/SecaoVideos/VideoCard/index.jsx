@@ -1,11 +1,12 @@
 import './VideoCard.css'
 import { LuTrash2 } from "react-icons/lu";
-import { RiEditLine } from "react-icons/ri";
+import { RiEditLine, RiExpandDiagonalFill } from "react-icons/ri";
 
-export default function VideoCard ({ videoUrl, controles=true }) {
+
+export default function VideoCard ({ videoUrl, controles=true, aoZoomSolicitado, big=false }) {
     return (
         <div className="video">
-            <iframe
+            <iframe className={`${big ? "big-card" : ""}`}
                 src={ videoUrl }
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -13,8 +14,9 @@ export default function VideoCard ({ videoUrl, controles=true }) {
             >
             </iframe>
             <div className={ `${ controles ? "controles" : "no"}` }>
-            <span><LuTrash2 style={{ color: 'white', fontSize: '18px' }} /> DELETAR</span>
-            <span><RiEditLine style={{ color: 'white', fontSize: '18px' }} /> EDITAR</span>
+            <span style={{cursor: 'pointer'}}><LuTrash2 style={{ color: 'white', fontSize: '18px' }} /> DELETAR</span>
+            <span style={{cursor: 'pointer'}}><RiEditLine style={{ color: 'white', fontSize: '18px' }} /> EDITAR</span>
+            <span style={{cursor: 'pointer'}}><RiExpandDiagonalFill style={{ color: 'white', fontSize: '18px' }} onClick={() => aoZoomSolicitado(videoUrl)}/></span>
             </div>
         </div>
     )

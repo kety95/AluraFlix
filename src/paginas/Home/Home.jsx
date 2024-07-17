@@ -2,12 +2,14 @@ import Banner from "../../components/Banner"
 import SecaoVideos from "../../components/SecaoVideos"
 import React, { useState, useEffect } from 'react';
 import './Home.css'
+import ModalVideo from "../../components/ModalVideo";
 
 const Home = () =>{
 
     const [videos, setVideos] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [videoSelecionado, setVideoSelecionado] = useState(null);
 
     useEffect(() => {
         const fetchVideos = async () => {
@@ -39,10 +41,11 @@ const Home = () =>{
     return(
         <div className={'home-container'}>
             <Banner videos={ frontend } />
-            <SecaoVideos videos={ frontend } />
-            <SecaoVideos videos={ backend } />
-            <SecaoVideos videos={ inovação } />
-            <SecaoVideos videos={ gestao } />
+            <SecaoVideos videos={ frontend } aoVideoSelecionado={video => setVideoSelecionado(video)}/>
+            <SecaoVideos videos={ backend } aoVideoSelecionado={video => setVideoSelecionado(video)}/>
+            <SecaoVideos videos={ inovação } aoVideoSelecionado={video => setVideoSelecionado(video)}/>
+            <SecaoVideos videos={ gestao } aoVideoSelecionado={video => setVideoSelecionado(video)}/>           
+            <ModalVideo video={ videoSelecionado } aoFechar={() => setVideoSelecionado(null)}/>
         </div>
     )
 }
